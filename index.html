@@ -7,15 +7,42 @@
     <!-- Tailwind CSS CDN for modern, responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background-color: #ff9900;
             background-image: linear-gradient(to bottom right, #ffcc00, #ff8000);
         }
         /* Custom class for the scroll animation */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Initial state for elements that will be animated on scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Final state for elements when they are visible */
+        .animate-on-scroll.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes for Hero Section elements */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-text {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .hero-image {
+            animation: fadeIn 1s ease-out 0.5s forwards;
         }
     </style>
 </head>
@@ -33,12 +60,12 @@
         <!-- Hero Section - Now a two-column layout with content on the left -->
         <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
             <!-- Hero Text and Button -->
-            <div class="text-center md:text-left">
+            <div class="text-center md:text-left hero-text">
                 <h1 class="text-4xl sm:text-5xl font-extrabold text-orange-900 drop-shadow-md">
-                    Pucker Up for an Explosive Workout!
+                    The MOST Sour Preworkout on the Market!
                 </h1>
-                <p class="text-lg text-gray-700 mt-4">
-                    Experience the electrifying, sour kick that fuels your most intense workouts. Get ready for an energy boost that hits different.
+                <p class="text-lg text-gray-700 mt-4 font-bold">
+                    Experience the electrifying, sour kick that fuels your most intense workouts. Get ready for an energy boost that makes you pucker with intensity.
                 </p>
                 <a href="#email-section" class="inline-block mt-6 px-6 py-3 rounded-lg text-white font-bold bg-gradient-to-r from-[#ff9900] to-[#ff8000] shadow-md hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform hover:scale-105">
                     Get Notified
@@ -46,65 +73,83 @@
             </div>
             
             <!-- Hero Image -->
-            <div class="relative w-full max-w-[250px] aspect-square rounded-2xl shadow-xl overflow-hidden">
+            <div class="relative w-full max-w-[250px] aspect-square rounded-2xl shadow-xl overflow-hidden hero-image">
                 <img src="https://i.ibb.co/Rpb0XzNm/New-Project-2.png" alt="PuckerFuel Pre-Workout" class="w-full h-full object-cover">
             </div>
         </div>
 
         <!-- Nutrition Information Section -->
-        <div class="w-full mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Superior Formula</h2>
+        <div class="w-full mb-8 animate-on-scroll">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6">Our Extra Spicy Formula</h2>
             <img src="https://i.ibb.co/fVs6dy6w/nutrition-explanation.png" alt="PuckerFuel Nutrition Facts" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
         </div>
 
         <!-- Benefits Section -->
         <div class="w-full text-center mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">The Explosive Difference</h2>
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6">The Explosive Difference</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
                 <!-- Benefit 1 -->
-                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00]">
-                    <p class="text-xl font-bold mb-2">⚡️ Explosive Energy</p>
-                    <p>Hit new personal records with a surge of energy that lasts through your entire workout.</p>
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00] animate-on-scroll">
+                    <p class="text-xl font-extrabold mb-2">⚡️ Explosive Energy</p>
+                    <p class="font-bold">Hit new personal records with a surge of energy that lasts through your entire workout.</p>
                 </div>
                 <!-- Benefit 2 -->
-                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00]">
-                    <p class="text-xl font-bold mb-2">🔥 Intense Focus</p>
-                    <p>Tune out distractions and zero in on every rep with razor-sharp mental clarity.</p>
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00] animate-on-scroll">
+                    <p class="text-xl font-extrabold mb-2">🔥 Intense Focus</p>
+                    <p class="font-bold">Tune out distractions and zero in on every rep with razor-sharp mental clarity.</p>
                 </div>
                 <!-- Benefit 3 -->
-                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00]">
-                    <p class="text-xl font-bold mb-2">💪 Peak Performance</p>
-                    <p>Unlock your true potential and push past your limits with our powerful formula.</p>
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00] animate-on-scroll">
+                    <p class="text-xl font-extrabold mb-2">💪 Peak Performance</p>
+                    <p class="font-bold">Unlock your true potential and push past your limits with our powerful formula.</p>
                 </div>
                 <!-- Benefit 4 -->
-                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00]">
-                    <p class="text-xl font-bold mb-2">🍋 Sour Satisfaction</p>
-                    <p>Enjoy the deliciously sour taste that makes you pucker up and get ready to go!</p>
+                <div class="bg-yellow-50 p-6 rounded-lg shadow-md border-t-4 border-[#ffcc00] animate-on-scroll">
+                    <p class="text-xl font-extrabold mb-2">🍋 Sour Satisfaction</p>
+                    <p class="font-bold">Enjoy the deliciously sour taste that makes you pucker up and get ready to go!</p>
                 </div>
             </div>
         </div>
         
         <!-- Email Opt-in Section -->
-        <div id="email-section" class="w-full bg-yellow-100 p-6 rounded-lg shadow-inner border border-yellow-200">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Join the PuckerFuel Crew</h2>
-            <p class="text-gray-700 mb-4">Be the first to know when we launch and get exclusive offers!</p>
+        <div id="email-section" class="w-full bg-yellow-100 p-6 rounded-lg shadow-inner border border-yellow-200 animate-on-scroll">
+            <h2 class="text-2xl font-extrabold text-gray-800 mb-4">Join the PuckerFuel Crew</h2>
+            <p class="text-gray-700 mb-4 font-bold">Be the first to know when we launch and get exclusive offers!</p>
 
             <!-- A clean, simple form that submits directly to Mailchimp -->
             <form action="https://gmail.us5.list-manage.com/subscribe/post?u=ba7c7f0ca5ca12de7bf9b78d7&amp;id=a131ffc02c&amp;f_id=009cc6e1f0" method="post" target="_blank" novalidate>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <input type="email" name="EMAIL" id="email-input" placeholder="Enter your email" class="p-3 w-full sm:w-2/3 rounded-lg border border-yellow-300 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]" required>
+                    <input type="email" name="EMAIL" id="email-input" placeholder="Enter your email" class="p-3 w-full sm:w-2/3 rounded-lg border border-yellow-300 focus:outline-none focus:ring-2 focus:ring-[#ffcc00] font-bold transition-all duration-300 hover:shadow-md hover:border-[#ffcc00]">
                     
                     <!-- This hidden field helps prevent bot signups -->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                         <input type="text" name="b_ba7c7f0ca5ca12de7bf9b78d7_a131ffc02c" tabindex="-1" value="">
                     </div>
 
-                    <button type="submit" name="subscribe" id="subscribe-button" class="p-3 w-full sm:w-1/3 rounded-lg text-white font-bold bg-gradient-to-r from-[#ff9900] to-[#ff8000] shadow-md hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform hover:scale-105">
-                        Subscribe
+                    <button type="submit" name="subscribe" id="subscribe-button" class="p-3 w-full sm:w-1/3 rounded-lg text-white font-extrabold bg-gradient-to-r from-[#ff9900] to-[#ff8000] shadow-md hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform hover:scale-105">
+                        Get Notified
                     </button>
                 </div>
             </form>
         </div>
     </div>
+
+    <!-- Script to handle on-scroll animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
