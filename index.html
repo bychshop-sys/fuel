@@ -6,6 +6,8 @@
     <title>PuckerFuel - Fuel Your Workout</title>
     <!-- Tailwind CSS CDN for modern, responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery library, required by Mailchimp embed code -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRzsm/PvJ/Bq6Q0W4P/k1oDkP9P/j7n28=" crossorigin="anonymous"></script>
     <!-- Mailchimp connected sites script -->
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ba7c7f0ca5ca12de7bf9b78d7/93ff82e659d6fcd38d7065510.js");</script>
     <style>
@@ -18,6 +20,11 @@
         /* Custom class for the scroll animation */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Mailchimp Form Overrides for responsiveness */
+        #mc_embed_signup {
+            width: 100% !important;
         }
     </style>
 </head>
@@ -90,18 +97,44 @@
         <div id="email-section" class="w-full bg-yellow-100 p-6 rounded-lg shadow-inner border border-yellow-200">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Join the PuckerFuel Crew</h2>
             <!-- Direct Form Submission to Mailchimp -->
-            <form action="YOUR_MAILCHIMP_FORM_ACTION_URL" method="POST" target="_blank" novalidate>
-                <div class="space-y-4">
-                    <input type="email" name="EMAIL" placeholder="Enter your best email" required class="w-full px-4 py-3 rounded-lg border-2 border-[#ffcc00] focus:outline-none focus:ring-2 focus:ring-[#ff9900] transition duration-200">
-                    <!-- The following is a hidden "honeypot" field for spam bots. DO NOT change the name. -->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_YOUR_UNIQUE_ID_HERE" tabindex="-1" value="">
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-[#ff9900] to-[#ff8000] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform hover:scale-105">
-                        Sign Up Now
-                    </button>
+            <div id="mc_embed_shell">
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup {
+                        background: transparent;
+                        false;
+                        clear: left;
+                        font: 14px Helvetica, Arial, sans-serif;
+                        width: 100%;
+                    }
+                </style>
+                <div id="mc_embed_signup">
+                    <form action="https://gmail.us5.list-manage.com/subscribe/post?u=ba7c7f0ca5ca12de7bf9b78d7&amp;id=a131ffc02c&amp;f_id=009cc6e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                            </div>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display: none;"></div>
+                                <div class="response" id="mce-success-response" style="display: none;"></div>
+                            </div>
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                                <input type="text" name="b_ba7c7f0ca5ca12de7bf9b78d7_a131ffc02c" tabindex="-1" value="">
+                            </div>
+                            <div class="optionalParent">
+                                <div class="clear foot">
+                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                    <p style="margin: 0px auto;"><a href="http://eepurl.com/jmE5Lw" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            </div>
         </div>
     </div>
 
