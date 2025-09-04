@@ -87,76 +87,21 @@
         <!-- Email Opt-in Section -->
         <div id="email-section" class="w-full bg-yellow-100 p-6 rounded-lg shadow-inner border border-yellow-200">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Join the PuckerFuel Crew</h2>
-            <!-- JavaScript-driven Opt-in Form -->
-            <div class="space-y-4">
-                <input type="email" id="email" name="email" placeholder="Enter your best email" required class="w-full px-4 py-3 rounded-lg border-2 border-[#ffcc00] focus:outline-none focus:ring-2 focus:ring-[#ff9900] transition duration-200">
-                <button type="button" id="submit-btn" class="w-full bg-gradient-to-r from-[#ff9900] to-[#ff8000] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform hover:scale-105">
-                    Sign Up Now
-                </button>
-            </div>
-            <div id="status-message" class="mt-4 hidden font-semibold"></div>
+            <!-- Direct Form Submission to Mailchimp -->
+            <form action="YOUR_MAILCHIMP_FORM_ACTION_URL" method="POST" target="_blank" novalidate>
+                <div class="space-y-4">
+                    <input type="email" name="EMAIL" placeholder="Enter your best email" required class="w-full px-4 py-3 rounded-lg border-2 border-[#ffcc00] focus:outline-none focus:ring-2 focus:ring-[#ff9900] transition duration-200">
+                    <!-- The following is a hidden "honeypot" field for spam bots. DO NOT change the name. -->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_YOUR_UNIQUE_ID_HERE" tabindex="-1" value="">
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-[#ff9900] to-[#ff8000] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform hover:scale-105">
+                        Sign Up Now
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-
-    <!-- JavaScript for Form Handling -->
-    <script>
-        const emailInput = document.getElementById('email');
-        const submitBtn = document.getElementById('submit-btn');
-        const statusMessage = document.getElementById('status-message');
-
-        submitBtn.addEventListener('click', async () => {
-            const email = emailInput.value;
-
-            // Simple client-side validation
-            if (!email || !email.includes('@')) {
-                statusMessage.textContent = "Please enter a valid email address.";
-                statusMessage.classList.remove('hidden', 'text-green-700');
-                statusMessage.classList.add('text-red-700');
-                return;
-            }
-
-            statusMessage.textContent = "Signing you up...";
-            statusMessage.classList.remove('hidden', 'text-red-700');
-            statusMessage.classList.add('text-gray-600');
-            
-            // In a real application, you would make an API call here.
-            // Example using fetch to a backend proxy:
-            /*
-            try {
-                const response = await fetch('/api/mailchimp-subscribe', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email })
-                });
-
-                const result = await response.json();
-
-                if (response.ok) {
-                    statusMessage.textContent = "Thanks for signing up! We'll notify you when we launch!";
-                    statusMessage.classList.remove('text-gray-600', 'text-red-700');
-                    statusMessage.classList.add('text-green-700');
-                    emailInput.value = ''; // Clear the input field
-                } else {
-                    statusMessage.textContent = result.message || "Something went wrong. Please try again.";
-                    statusMessage.classList.remove('text-gray-600', 'text-green-700');
-                    statusMessage.classList.add('text-red-700');
-                }
-            } catch (error) {
-                console.error('Submission error:', error);
-                statusMessage.textContent = "Connection error. Please check your internet and try again.";
-                statusMessage.classList.remove('text-gray-600', 'text-green-700');
-                statusMessage.classList.add('text-red-700');
-            }
-            */
-
-            // Placeholder for demonstration:
-            await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate a network delay
-            statusMessage.textContent = "Thanks for signing up! We'll notify you when we launch!";
-            statusMessage.classList.remove('text-gray-600', 'text-red-700');
-            statusMessage.classList.add('text-green-700');
-            emailInput.value = '';
-        });
-    </script>
 
 </body>
 </html>
