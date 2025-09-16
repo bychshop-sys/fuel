@@ -6,6 +6,7 @@
     <title>PuckerFuel - The Most Sour Pre-Workout | Fuel Your Workout</title>
     <meta name="description" content="PuckerFuel is the most intense, sour pre-workout on the market. Get explosive energy, razor-sharp focus, and peak performance for your workouts. Join our waitlist now for exclusive launch offers!">
     <meta name="keywords" content="PuckerFuel pre-workout, Most sour pre-workout, Explosive energy supplement, Intense focus pre-workout, Peak performance booster, Electrifying workout kick, Unleash potential pre-workout, Surpass personal records, Razor-sharp mental clarity, High potency pre-workout, Extra spicy formula energy, Sustained workout energy, Dominate gym sessions, Conquer fitness goals, Pre-workout for athletes, Stimulant seeker energy, Novelty taste pre-workout, Unique workout experience, Challenge your limits, Powerful pre-workout formula, Pre-workout with a pucker, Maximize workout intensity, Ignite your workout, Performance edge supplement, No crash pre-workout, Grit and energy booster, Legend-making pre-workout, Extreme sour taste pre-workout, Fuel your intensity, Pre-workout for serious lifters">
+    <link rel="icon" href="https://i.ibb.co/Gf1TPZRn/New-Project.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +123,7 @@
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
         }
 
-        /* FAQ Styles */
+        /* Accordion Styles */
         .accordion-item {
             border-bottom: 1px solid #4a5568;
         }
@@ -143,7 +144,7 @@
             padding: 0;
         }
         .accordion-content.active {
-            max-height: 500px; /* A safe height to accommodate content */
+            max-height: 1000px; /* A safe height to accommodate content */
             padding-bottom: 1rem;
         }
         .rotate-180 {
@@ -153,6 +154,38 @@
             transition: transform 0.3s ease-in-out;
         }
 
+        /* Scrolling banner styles */
+        .scrolling-banner-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            transform: rotate(-2deg);
+            transform-origin: center center;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+        .scrolling-text {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll-left 12s linear infinite; /* Faster animation */
+        }
+        .scrolling-text > span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #fff;
+            padding: 0 2rem;
+            letter-spacing: 0.1em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            background-clip: text;
+            background-image: linear-gradient(to right, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes scroll-left {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-50%); }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center py-4 bg-[#1a1a1a]">
@@ -182,30 +215,22 @@
                     <img src="https://i.ibb.co/Gf1TPZRn/New-Project.png" alt="PuckerFuel Logo" class="rounded-full w-12 h-12 shadow-lg animate-hero-image">
                     <span class="ml-4 text-3xl font-extrabold text-white drop-shadow-md font-['Montserrat']">PuckerFuel</span>
                 </header>
-                <h1 class="text-4xl sm:text-5xl font-black text-white drop-shadow-md font-['Montserrat']">
-                    UNLEASH YOUR POWER.<br>ONE PUCKER AT A TIME.
+                <h1 class="text-3xl sm:text-4xl font-black text-white drop-shadow-md font-['Montserrat']">
+                    Can you handle the sour?<br>
                 </h1>
                 <!-- Electrifying Text -->
-                <p class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f97316] to-[#ea580c] mt-2 mb-4 font-['Montserrat']">
-                    Can you handle the sour?
-                </p>
+
                 <!-- End Electrifying Text -->
-                <p class="text-lg text-body mt-4 max-w-md mx-auto md:mx-0 font-['Open_Sans']">
-                    Get ready for the **electrifying** sour kick that **ignites** explosive energy and **razor-sharp** focus.
+                <p class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f97316] to-[#ea580c] text-center mb-4">
+                    Get 20% off, by joining the waitlist!
                 </p>
                 <!-- Mailchimp Form Integration -->
                 <div class="w-full mt-6">
                      <div id="mc_embed_shell">
                         <div id="mc_embed_signup" class="w-full max-w-sm mx-auto md:mx-0">
-                             <p class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f97316] to-[#ea580c] text-center mb-4">
-                                Get 20% off when we launch!
-                            </p>
-                            <p class="text-base font-bold text-white text-center mb-2 font-['Montserrat']">
-                                Join the **movement**. Get **exclusive updates** & early access.
-                            </p>
                             <form action="https://puckerfuel.us5.list-manage.com/subscribe/post?u=ba7c7f0ca5ca12de7bf9b78d7&amp;id=a131ffc02c&amp;f_id=0083c6e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                                 <div id="mc_embed_signup_scroll">
-                                    <div class="indicates-required text-xs text-center"><span class="asterisk">*</span> indicates required</div>
+                                    <div class="indicates-required text-xs text-center"><span class="asterisk"></span> </div>
                                     <div class="mc-field-group mt-2">
                                         <label for="mce-EMAIL" class="text-sm">Email Address <span class="asterisk">*</span></label>
                                         <input type="email" name="EMAIL" class="required email w-full p-2 border rounded" id="mce-EMAIL" required="" value="">
@@ -219,7 +244,7 @@
                                     </div>
                                     <div class="optionalParent">
                                         <div class="clear foot mt-4">
-                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button w-full px-6 py-3 rounded-lg text-white font-bold bg-gradient-to-r from-[#f97316] to-[#ea580c] shadow-xl hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform btn-hover" value="Fuel Me Up">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button w-full px-6 py-3 rounded-lg text-white font-bold bg-gradient-to-r from-[#f97316] to-[#ea580c] shadow-xl hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform btn-hover" value="Give me 20% OFF">
                                         </div>
                                     </div>
                                 </div>
@@ -228,40 +253,42 @@
                     </div>
                 </div>
             </div>
-            <!-- Removed 'shadow-xl' class from this div to remove the hero image drop shadow -->
-            <div class="flex-1 relative w-full max-w-[400px] aspect-square rounded-2xl overflow-hidden animate-hero-image transform transition-transform duration-300 hover:scale-105 hover:-rotate-3">
+            <div class="flex-1 relative w-full md:max-w-xl rounded-2xl overflow-hidden animate-hero-image transform transition-transform duration-300 hover:scale-105 hover:-rotate-3">
                 <img src="https://i.ibb.co/JWPGjvmD/AIEnhancer-ADSSDA-3-3.png" alt="A vibrant yellow tub of PuckerFuel Sour Pre-Workout, angled dynamically." class="w-full h-full object-cover">
             </div>
         </section>
+    </main>
+    
+    <!-- Scrolling Banner -->
+    <div class="scrolling-banner-container bg-[#333] w-screen">
+        <div class="scrolling-text">
+            <!-- Duplicated content for seamless loop -->
+            <span>SUPER SOUR •</span>
+            <span>EXPLOSIVE ENERGY •</span>
+            <span>RAZOR FOCUS •</span>
+            <span>MAXIMAL PERFORMANCE •</span>
+            <span>SUPER SOUR •</span>
+            <span>EXPLOSIVE ENERGY •</span>
+            <span>RAZOR FOCUS •</span>
+            <span>MAXIMAL PERFORMANCE •</span>
+            <span>SUPER SOUR •</span>
+            <span>EXPLOSIVE ENERGY •</span>
+            <span>RAZOR FOCUS •</span>
+            <span>MAXIMAL PERFORMANCE •</span>
+            <span>SUPER SOUR •</span>
+            <span>EXPLOSIVE ENERGY •</span>
+            <span>RAZOR FOCUS •</span>
+            <span>MAXIMAL PERFORMANCE •</span>
+        </div>
+    </div>
 
-        <!-- The "Fuel Your Drive" Section - Rebranded as "The Pucker Advantage" -->
-        <section class="w-full text-center p-8 rounded-3xl bg-[#2a2a2a] shadow-2xl animate-on-scroll">
-            <h2 class="text-3xl font-black text-white mb-6 font-['Montserrat']">THE PUCKER ADVANTAGE</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-xl shadow-md border-t-4 border-[#ff8c00] animate-on-scroll transform transition-transform duration-300 card-hover" style="transition-delay: 0.1s;">
-                    <span class="text-4xl mb-2 block">⚡️</span>
-                    <p class="text-xl font-bold mb-2 font-['Montserrat']">Explosive Energy Surge</p>
-                    <p class="text-sm text-body font-['Open_Sans']">Power through your toughest sets and hit new personal **records**.</p>
-                </div>
-                <div class="p-6 rounded-xl shadow-md border-t-4 border-[#ff8c00] animate-on-scroll transform transition-transform duration-300 card-hover" style="transition-delay: 0.2s;">
-                    <span class="text-4xl mb-2 block">🎯</span>
-                    <p class="text-xl font-bold mb-2 font-['Montserrat']">Razor-Sharp Focus</p>
-                    <p class="text-sm text-body font-['Open_Sans']">Tune out distractions and connect mind-to-muscle with intense **clarity**.</p>
-                </div>
-                <div class="p-6 rounded-xl shadow-md border-t-4 border-[#ff8c00] animate-on-scroll transform transition-transform duration-300 card-hover" style="transition-delay: 0.3s;">
-                    <span class="text-4xl mb-2 block">💪</span>
-                    <p class="text-xl font-bold mb-2 font-['Montserrat']">Maximize Performance</p>
-                    <p class="text-sm text-body font-['Open_Sans']">**Unlock** your full athletic **potential** and push beyond your **limits**.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formula Breakdown Section -->
+    <!-- Main content container continues -->
+    <main class="w-full max-w-4xl space-y-20 z-10 px-4 md:px-0">
+        <!-- Formula Breakdown Section as a dropdown -->
         <section class="w-full p-8 rounded-3xl shadow-2xl bg-[#2a2a2a] animate-on-scroll">
-            <h2 class="text-3xl font-black text-white text-center mb-6 font-['Montserrat']">FORMULA BREAKDOWN</h2>
             <div class="accordion-item text-body">
-                <button class="accordion-button font-['Open_Sans'] text-white">
-                    Unlock the PuckerFuel Formula
+                <button class="accordion-button text-3xl font-black text-white font-['Montserrat']">
+                    FORMULA BREAKDOWN
                     <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
                 </button>
                 <div class="accordion-content">
@@ -318,34 +345,17 @@
                         <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
                     </button>
                     <div class="accordion-content">
-                        <p class="text-body mt-2">Don't mistake our signature sourness for mere novelty. It's an **electrifying** signal that **unlocks razor-sharp focus** and **explosive energy** for peak performance. The sensory experience is designed to be part of your pre-workout ritual, not a distraction from the product's powerful effects.</p>
+                        <p class="text-body mt-2">Don't mistake our signature sourness for mere novelty. It's an electrifying signal that unlocks razor-sharp focus and explosive energy for peak performance. The sensory experience is designed to be part of your pre-workout ritual, not a distraction from the product's powerful effects.</p>
                     </div>
                 </div>
-                <div class="accordion-item text-body">
-                    <button class="accordion-button font-['Open_Sans'] text-white">
-                        Will this pre-workout cause a harsh crash?
-                        <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-body mt-2">Our formula is designed for sustained power, not a sudden drop. It delivers a consistent **surge** of energy, carrying you through every rep and every set without an abrupt end to your **workout**. You'll feel a smooth, controlled ride, not a jarring crash.</p>
-                    </div>
-                </div>
-                <div class="accordion-item text-body">
-                    <button class="accordion-button font-['Open_Sans'] text-white">
-                        Will the formula be too strong, causing jitters or stomach issues?
-                        <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-body mt-2">Our potent blend is crafted for a clean, **intense focus** and **electrifying energy**, allowing you to **dominate** without jitters or stomach discomfort. The formula is engineered for a **powerful kick** that **ignites** your performance, not your gut.</p>
-                    </div>
-                </div>
+
                 <div class="accordion-item text-body">
                     <button class="accordion-button font-['Open_Sans'] text-white">
                         Will I build a tolerance to the product quickly?
                         <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
                     </button>
                     <div class="accordion-content">
-                        <p class="text-body mt-2">PuckerFuel is formulated for consistent **peak performance**. Its effectiveness won't diminish rapidly, ensuring your intensity and **focus** remain **razor-sharp** with every session. Your **grit** is always rewarded with the same high-level performance.</p>
+                        <p class="text-body mt-2">PuckerFuel is formulated for consistent peak performance. Its effectiveness won't diminish rapidly, ensuring your intensity and focus remain razor-sharp with every session. Your grit is always rewarded with the same high-level performance.</p>
                     </div>
                 </div>
                 <div class="accordion-item text-body">
@@ -354,25 +364,17 @@
                         <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
                     </button>
                     <div class="accordion-content">
-                        <p class="text-body mt-2">The **electrifying** sourness is the lead act, not a distraction. It primes your senses, making the overall experience a memorable jolt to your routine. The flavor is intense by design, not a mask for a subpar taste.</p>
+                        <p class="text-body mt-2">The electrifying sourness is the lead act, not a distraction. It primes your senses, making the overall experience a memorable jolt to your routine. The flavor is intense by design, not a mask for a subpar taste.</p>
                     </div>
                 </div>
-                <div class="accordion-item text-body">
-                    <button class="accordion-button font-['Open_Sans'] text-white">
-                        Is PuckerFuel a flash-in-the-pan trend?
-                        <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
-                    </button>
-                    <div class="accordion-content">
-                        <p class="text-body mt-2">PuckerFuel's unique approach is matched by its commitment to quality. This isn't a temporary trend; it's your next level of sustained, **powerful performance**, built for the long game.</p>
-                    </div>
-                </div>
+
                 <div class="accordion-item text-body">
                     <button class="accordion-button font-['Open_Sans'] text-white">
                         I need a pre-workout that boosts my mental game, not just my body. Will this help?
                         <span class="ml-2 transform transition-transform rotate-0">&#x2B;</span>
                     </button>
                     <div class="accordion-content">
-                        <p class="text-body mt-2">The signature PuckerFuel kick is more than just physical energy. It’s a mental **challenge**, a focused spark that preps your mind to **conquer** every **workout**, strengthening the crucial mind-body connection.</p>
+                        <p class="text-body mt-2">The signature PuckerFuel kick is more than just physical energy. It’s a mental challenge, a focused spark that preps your mind to conquer every workout, strengthening the crucial mind-body connection.</p>
                     </div>
                 </div>
             </div>
@@ -382,7 +384,7 @@
         <section class="w-full text-center p-8 rounded-3xl shadow-2xl bg-[#2a2a2a] animate-on-scroll">
             <h2 class="text-3xl font-black text-white mb-4 font-['Montserrat']">READY TO CONQUER?</h2>
             <p class="text-base text-body mb-6 max-w-xl mx-auto font-['Open_Sans']">
-                Join our waitlist now and get ready to experience the most **intense** and **sour** pre-workout on the market. Don't miss out on **exclusive** launch offers!
+                Join our waitlist now and get ready to experience the most intense and sour pre-workout on the market. Don't miss out on exclusive launch offers!
             </p>
             <div class="w-full max-w-sm mx-auto">
                 <div id="mc_embed_shell">
@@ -392,7 +394,7 @@
                         </p>
                         <form action="https://puckerfuel.us5.list-manage.com/subscribe/post?u=ba7c7f0ca5ca12de7bf9b78d7&amp;id=a131ffc02c&amp;f_id=0083c6e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                             <div id="mc_embed_signup_scroll">
-                                <div class="indicates-required text-xs text-center text-body"><span class="asterisk">*</span> indicates required</div>
+                                <div class="indicates-required text-xs text-center text-body"><span class="asterisk"></span> </div>
                                 <div class="mc-field-group mt-2">
                                     <label for="mce-EMAIL-footer" class="text-sm">Email Address <span class="asterisk">*</span></label>
                                     <input type="email" name="EMAIL" class="required email w-full p-2 border rounded" id="mce-EMAIL-footer" required="" value="">
@@ -406,7 +408,7 @@
                                 </div>
                                 <div class="optionalParent">
                                     <div class="clear foot mt-4">
-                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe-footer" class="button w-full px-6 py-3 rounded-lg text-white font-bold bg-gradient-to-r from-[#f97316] to-[#ea580c] shadow-xl hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform btn-hover font-['Montserrat']" value="Dominate My Workout">
+                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe-footer" class="button w-full px-6 py-3 rounded-lg text-white font-bold bg-gradient-to-r from-[#f97316] to-[#ea580c] shadow-xl hover:from-[#ff8c00] hover:to-[#ff8000] transition duration-200 transform btn-hover font-['Montserrat']" value="Give me 20% OFF">
                                     </div>
                                 </div>
                             </div>
@@ -443,7 +445,7 @@
             observer.observe(element);
         });
 
-        // FAQ accordion logic
+        // FAQ and Formula accordion logic
         document.querySelectorAll('.accordion-button').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
