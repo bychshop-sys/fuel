@@ -495,7 +495,8 @@
     <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 
 <script>
-    import { Analytics } from "@vercel/analytics/next"
+  import { inject } from 'https://unpkg.com/@vercel/analytics@1.0.1/dist/inject.js';
+  inject();
 </script>
 
 </body>
