@@ -84,6 +84,34 @@
     
     <style>
            
+        /* 1. Wrapper to control the maximum size and center the square element */
+        .viewer-wrapper {
+            width: 60vw; /* Take up 90% of the viewport width */
+            max-width: 800px; /* Limit the maximum size on large screens */
+            margin: 0 auto; /* Center wrapper horizontally */
+        }
+        
+        /* 2. Container uses the padding-bottom hack for a 1:1 aspect ratio */
+        .viewer-container {
+            /* 1:1 Aspect Ratio Hack: Set height to 0 and padding-bottom to 100% of the width */
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; /* Makes height equal to width (1:1 ratio) */
+            position: relative;
+        }
+
+        /* 3. Ensure the iframe fills its absolutely positioned container */
+        .viewer-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+            border-radius: 12px; /* Slight rounding for polish, still no border line */
+        }
+      
+      
+      
         * {
             box-sizing: border-box;
         }
@@ -331,6 +359,33 @@
               
 
                 <div class="grid lg:grid-cols-2 gap-0 items-center">
+                  
+                  
+                          <!-- New Viewer Wrapper for size control -->
+        <div class="viewer-wrapper">
+            <!-- Viewer Container - No visible borders, uses custom CSS for 1:1 ratio -->
+            <div class="viewer-container overflow-hidden">
+                <!-- 
+                    The Sketchfab iframe. No explicit width/height tags needed here 
+                    as the CSS takes care of it.
+                -->
+                <iframe 
+                    title="Puckerfuel" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" 
+                    xr-spatial-tracking 
+                    execution-while-out-of-viewport 
+                    execution-while-not-rendered 
+                    web-share 
+                    src="https://sketchfab.com/models/f8e0bcaa6be149288c4b15a1fe170405/embed?autospin=0.5&autostart=1&camera=0&preload=1&transparent=1">
+                </iframe>
+            </div>
+        </div>
+                  
+     <!--                
                     <div class="text-center scroll-reveal">
                         <div class="relative inline-block">
                             <img src="https://i.ibb.co/whmhBW7S/AIEnhancer-Gemini-Generated-Image-v0kdusv0kdusv0kd-1-2.png" 
@@ -342,7 +397,8 @@
                             </div>
                         </div>
                     </div>
-
+                  
+  -->
                     <div class="scroll-reveal">
 
                         <div class="bg-pf-card rounded-2xl p-8 border border-pf-orange/20 mb-8">
@@ -493,6 +549,12 @@
       
         <section class="section-spacing bg-pf-dark">
             <div class="container mx-auto px-4 max-w-7xl">
+              
+
+
+             
+              
+              
                 <div class="text-center mb-16 scroll-reveal">
                     <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
                         About PuckerFuel
