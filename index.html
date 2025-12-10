@@ -1226,36 +1226,43 @@
             document.getElementById('tour-title').textContent = step.title;
             document.getElementById('tour-text').textContent = step.text;
 
-            // Position tooltip relative to target
+            // Position tooltip relative to target - ENHANCED FOR RESPONSIVENESS
             const rect = target.getBoundingClientRect();
-            const tooltipWidth = tooltip.offsetWidth;
-            const tooltipHeight = tooltip.offsetHeight;
-
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const tooltipWidth = tooltipRect.width;
+            const tooltipHeight = tooltipRect.height;
+            const space = 15; // Space between tooltip and target element
+            const arrowSize = 10;
             let top, left;
 
             if (step.position === 'bottom') {
-                top = rect.bottom + window.scrollY + 20; // 20px below target
-                left = rect.left + window.scrollX + (rect.width / 2) - (tooltipWidth / 2); // Centered horizontally
+                top = rect.bottom + window.scrollY + space;
                 tooltip.classList.add('arrow-up');
             } else { // top
-                top = rect.top + window.scrollY - tooltipHeight - 20; // 20px above target
-                left = rect.left + window.scrollX + (rect.width / 2) - (tooltipWidth / 2); // Centered horizontally
+                top = rect.top + window.scrollY - tooltipHeight - space;
                 tooltip.classList.add('arrow-down');
             }
 
-            // Keep tooltip on screen
-            if (left < 20) left = 20;
-            if (left + tooltipWidth > window.innerWidth - 20) {
-                left = window.innerWidth - tooltipWidth - 20;
+            // Center horizontally by default
+            left = rect.left + window.scrollX + (rect.width / 2) - (tooltipWidth / 2);
+
+            // --- Boundary Checks ---
+            // Keep tooltip on screen horizontally
+            const margin = 20;
+            if (left < margin) {
+                left = margin;
+            }
+            if (left + tooltipWidth > window.innerWidth - margin) {
+                left = window.innerWidth - tooltipWidth - margin;
             }
 
-            // Keep tooltip on screen (vertical) - if 'top' position goes off-screen, switch to 'bottom'
-            if (top < window.scrollY + 20 && step.position === 'top') {
-                top = rect.bottom + window.scrollY + 20; // Position below target instead
+            // Keep tooltip on screen vertically (flip position if needed)
+            if (top < window.scrollY + margin && step.position === 'top') {
+                top = rect.bottom + window.scrollY + space; // Flip to bottom
                 tooltip.classList.remove('arrow-down');
                 tooltip.classList.add('arrow-up');
-            } else if (top + tooltipHeight > window.innerHeight + window.scrollY - 20 && step.position === 'bottom') {
-                top = rect.top + window.scrollY - tooltipHeight - 20; // Position above target instead
+            } else if (top + tooltipHeight > window.innerHeight + window.scrollY - margin && step.position === 'bottom') {
+                top = rect.top + window.scrollY - tooltipHeight - space; // Flip to top
                 tooltip.classList.remove('arrow-up');
                 tooltip.classList.add('arrow-down');
             }
