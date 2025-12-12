@@ -328,11 +328,28 @@
             <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="font-display font-black text-2xl tracking-tighter">
                 PUCKER<span class="text-pf-orange">FUEL</span>
             </a>
-            <nav>
-                <a href="https://de9c0110.sibforms.com/serve/MUIFAGfTwFdv7ApqLIMPMwlp8BMmAFzrsNBjVTHoe9CQgGhT_sgKl93YK-JQ4QnApzSxd4MNOP1zZEmsh69VQ6Dae0c8RPOv8PLaEcTy1J-E1WnLa_1gv9XV74HCFiQNFQ2U7mxgHAuOR8CkbAcmXDVn4PALEfYC69QbcSD0kAxJh-d4Iz8pzKy9nlp0XayzgaW45Boc6u6Pm3s1" class="bg-red-800/50 hover:bg-red-700/60 border border-red-600/50 text-white font-bold py-2 px-4 rounded-lg text-xs md:text-sm transition-colors">
-                    Delete My Email
-                </a>
-            </nav>
+            <!-- Header Countdown Timer -->
+            <div id="countdown-header" class="flex items-center gap-2 md:gap-3">
+                <div class="countdown-item text-center">
+                    <span id="days-header" class="countdown-number text-lg md:text-xl">00</span>
+                    <span class="countdown-label text-xs">Days</span>
+                </div>
+                <span class="countdown-number text-pf-orange text-lg">:</span>
+                <div class="countdown-item text-center">
+                    <span id="hours-header" class="countdown-number text-lg md:text-xl">00</span>
+                    <span class="countdown-label text-xs">Hours</span>
+                </div>
+                <span class="countdown-number text-pf-orange text-lg">:</span>
+                <div class="countdown-item text-center">
+                    <span id="minutes-header" class="countdown-number text-lg md:text-xl">00</span>
+                    <span class="countdown-label text-xs">Minutes</span>
+                </div>
+                <span class="countdown-number text-pf-orange text-lg hidden sm:inline">:</span>
+                <div class="countdown-item text-center hidden sm:block">
+                    <span id="seconds-header" class="countdown-number text-lg md:text-xl">00</span>
+                    <span class="countdown-label text-xs">Seconds</span>
+                </div>
+            </div>
         </div>
     </div>
   
@@ -365,11 +382,11 @@
                 <!-- 1. 20% OFF Launch Discount -->
                 <li class="flex items-start gap-3">
                     <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">1</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">Founders Wall Status</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle">
+                                <span class="inline-block align-middle -mt-px">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
@@ -378,18 +395,18 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">Priceless</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">Priceless</span>
                     </div>
                 </li>
 
                 <!-- 2. Founders Wall Status -->
                 <li class="flex items-start gap-3">
                     <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">2</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">Exclusive Giveaway</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle" >
+                                <span class="inline-block align-middle -mt-px" >
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
@@ -398,7 +415,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">€40 Value</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">€40 Value</span>
                     </div>
                 </li>
 
@@ -406,11 +423,11 @@
                 <!-- 4. Exclusive Community Discord -->
                 <li class="flex items-start gap-3">
                     <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">3</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">Exclusive Community Discord</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle">
+                                <span class="inline-block align-middle -mt-px">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
@@ -419,18 +436,18 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">€10 Value</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">€10 Value</span>
                     </div>
                 </li>
               
                               <!-- 3. Entry into Exclusive Giveaway -->
                 <li class="flex items-start gap-3">
                     <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">4</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">20% OFF</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle" >
+                                <span class="inline-block align-middle -mt-px" >
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
@@ -439,18 +456,18 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">€8 Value</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">€8 Value</span>
                     </div>
                 </li>
 
                 <!-- 5. First-to-Know Drop Notification -->
                 <li class="flex items-start gap-3">
                     <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">5</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">Early Access</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle" >
+                                <span class="inline-block align-middle -mt-px" >
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
@@ -459,60 +476,41 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">€5 Value</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">€5 Value</span>
                     </div>
                 </li>
 
-                <!-- 6. Exclusive Product Detail Brochure -->
-                <li class="flex items-start gap-3">
-                    <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">6</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
-                            <span class="font-semibold text-white">Exclusive Puckerfuel Brochure</span>
-                            <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle" >
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                </span>
-                                <!-- Tooltip Content -->
-                                <div class="absolute right-0 md:left-full top-1/2 transform -translate-y-1/2 md:translate-x-4 w-64 p-3 bg-pf-black border border-pf-orange/50 rounded-lg text-xs text-gray-300 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30">
-                                    In-depth explanation to the product ingredient and its benefit. And also the challenge guide.
-                                </div>
-                            </div>
-                        </div>
-                        <span class="font-bold text-pf-orange ml-2">€2 Value</span>
-                    </div>
-                </li>
 
 
                 <!-- 7. Free "How to Adjust Sourness" Guide -->
                 <li class="flex items-start gap-3">
-                    <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">7</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
-                            <span class="font-semibold text-white">Free "How to Adjust Sourness" Guide</span>
+                    <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">6</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
+                            <span class="font-semibold text-white">"Adjust Sourness" & Puckerfuel Guide</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle" >
+                                <span class="inline-block align-middle -mt-px" >
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
                                 <div class="absolute right-0 md:left-full top-1/2 transform -translate-y-1/2 md:translate-x-4 w-64 p-3 bg-pf-black border border-pf-orange/50 rounded-lg text-xs text-gray-300 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30">
-                                    Brochure with tips on making the pre-workout more or less sour.
+                                    Brochure with tips on making the pre-workout more or less sour. And a In-depth explanation to the product ingredient and its benefit. + the challenge guide.
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">€2 Value</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">€4 Value</span>
                     </div>
                 </li>
 
 
                 <!-- 8. Delete Information Guarantee -->
                 <li class="flex items-start gap-3">
-                    <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">8</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">7</span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">Delete Information Guarantee</span>
                             <div class="ml-2 cursor-pointer text-gray-500 hover:text-pf-orange transition-colors">
-                                <span class="inline-block align-middle" title="Full control over your data; delete your info whenever you want. ($5 Value)">
+                                <span class="inline-block align-middle -mt-px" title="Full control over your data; delete your info whenever you want. ($5 Value)">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </span>
                                 <!-- Tooltip Content -->
@@ -521,24 +519,24 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="font-bold text-pf-orange ml-2">-</span>
+                        <span class="font-bold text-pf-orange sm:ml-2">-</span>
                     </div>
                 </li>
               
                               <!-- 10. Delete Information Guarantee -->
-                <li class="flex items-start gap-3">
+              
+                              <li class="flex items-start gap-3">
                     <span class="bg-pf-orange text-black font-bold w-6 h-6 flex items-center justify-center rounded-full text-sm shrink-0 mt-0.5">€</span>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center group relative">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
+                        <div class="flex items-center group relative mb-1 sm:mb-0">
                             <span class="font-semibold text-white">TOTAL VALUE</span>
+
                         </div>
-                      
-
-<p class="font-display font-bold text-orange-500 line-through ml-2">€67</p>                 
-<span class="font-display font-bold text-green-400 ml-2">YOURS FREE!</span>
-
-                   </div>
+                        <p class=" font-bold text-pf-orange line-through ml-2">€67 Value</p> <span class="font-display font-bold text-green-400 ml-2">YOURS FREE!</span>
+                    </div>
                 </li>
+              
+
             </ul>
 
             <!-- BREVO FORM EMBED (Anchored Low) -->
@@ -771,23 +769,23 @@
             >
         </div>
         
-        <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="flex flex-nowrap overflow-x-auto gap-4 pb-4 md:grid md:grid-cols-3 md:gap-6 snap-x md:text-left">
 
-            <div class="bg-pf-gray p-6 rounded-xl border border-white/5 hover:border-pf-orange/50 transition-colors text-center">
+            <div class="bg-pf-gray p-6 rounded-xl border border-white/5 hover:border-pf-orange/50 transition-colors text-center min-w-[250px] shrink-0 snap-center">
                 <div class="text-pf-orange text-4xl mb-2">⚡</div>
                 <h4 class="font-display font-bold text-2xl mb-1">Caffeine</h4>
                 <p class="text-sm text-gray-400">Energy & Focus</p>
                 <p class="text-pf-orange font-black text-3xl mt-2">350mg</p>
             </div>
 
-            <div class="bg-pf-gray p-6 rounded-xl border border-white/5 hover:border-pf-orange/50 transition-colors text-center">
+            <div class="bg-pf-gray p-6 rounded-xl border border-white/5 hover:border-pf-orange/50 transition-colors text-center min-w-[250px] shrink-0 snap-center">
                 <div class="text-pf-orange text-4xl mb-2">💪</div>
                 <h4 class="font-display font-bold text-2xl mb-1">L-Citrulline</h4>
                 <p class="text-sm text-gray-400">Pump & Blood Flow</p>
                 <p class="text-pf-orange font-black text-3xl mt-2">6g</p>
             </div>
 
-            <div class="bg-pf-gray p-6 rounded-xl border border-white/5 hover:border-pf-orange/50 transition-colors text-center">
+            <div class="bg-pf-gray p-6 rounded-xl border border-white/5 hover:border-pf-orange/50 transition-colors text-center min-w-[250px] shrink-0 snap-center">
                 <div class="text-pf-orange text-4xl mb-2">🔋</div>
                 <h4 class="font-display font-bold text-2xl mb-1">Beta-Alanine</h4>
                 <p class="text-sm text-gray-400">Endurance & Stamina</p>
@@ -899,32 +897,35 @@
     <div class="container mx-auto max-w-3xl">
         <h2 class="font-display font-black text-3xl md:text-4xl mb-4 text-center">NO EMAIL? NO PROBLEM.</h2>
         
-        <div class="grid md:grid-cols-2 gap-4">
-            <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all">
+        <div class="flex flex-nowrap overflow-x-auto md:grid md:grid-cols-2 gap-4 pb-4 snap-x">        
+          
+                  <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all min-w-[250px] shrink-0 snap-center">
+                <div class="text-3xl mb-2">▶️</div>
+                <h3 class="font-bold text-lg mb-1">YouTube Channel</h3>
+                <p class="text-gray-300 text-xs">@Oaf_fitness Long-form content, product breakdowns, <br>and the official launch announcement video.</p>
+                <a href="https://www.youtube.com/channel/UCVdF52kzNis_W4hApl_x2aw" target="_blank" class="text-pf-orange font-semibold text-xs hover:underline mt-2 inline-block">Subscribe →</a>
+            </div>    
+          
+                      <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all min-w-[250px] shrink-0 snap-center">
+                <div class="text-3xl mb-2">🎵</div>
+                <h3 class="font-bold text-lg mb-1">TikTok Updates</h3>
+                <p class="text-gray-300 text-xs">@Oaf_fitness - Videos and launch notifications <br>via our pinned video.</p>
+                <a href="https://www.tiktok.com/@oaf_fitness" target="_blank" class="text-pf-orange font-semibold text-xs hover:underline mt-2 inline-block">Follow Us →</a>
+            </div>
+          
+            <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all min-w-[250px] shrink-0 snap-center">
                 <div class="text-3xl mb-2">📸</div>
                 <h3 class="font-bold text-lg mb-1">Follow on Instagram</h3>
-                <p class="text-gray-300 text-xs">@Oaf_fitnes - Daily stories, behind-the-scenes content, and launch announcements.</p>
+                <p class="text-gray-300 text-xs">@Oaf_fitnes - Daily stories, behind-the-scenes content, <br> and launch announcements.</p>
                 <a href="https://www.instagram.com/oaf_fitnes/" target="_blank" class="text-pf-orange font-semibold text-xs hover:underline mt-2 inline-block">Follow Us →</a>
             </div>
 
-            <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all">
-                <div class="text-3xl mb-2">🎵</div>
-                <h3 class="font-bold text-lg mb-1">TikTok Updates</h3>
-                <p class="text-gray-300 text-xs">@Oaf_fitness - Videos and launch notifications via our pinned video.</p>
-                <a href="https://www.tiktok.com/@oaf_fitness" target="_blank" class="text-pf-orange font-semibold text-xs hover:underline mt-2 inline-block">Follow Us →</a>
-            </div>
 
-            <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all">
-                <div class="text-3xl mb-2">▶️</div>
-                <h3 class="font-bold text-lg mb-1">YouTube Channel</h3>
-                <p class="text-gray-300 text-xs">@Oaf_fitness Long-form content, product breakdowns, and the official launch announcement video.</p>
-                <a href="https://www.youtube.com/channel/UCVdF52kzNis_W4hApl_x2aw" target="_blank" class="text-pf-orange font-semibold text-xs hover:underline mt-2 inline-block">Subscribe →</a>
-            </div>
             
-             <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all">
+             <div class="bg-pf-gray border border-white/10 rounded-xl p-4 hover:border-pf-orange/50 transition-all min-w-[250px] shrink-0 snap-center">
                 <div class="text-3xl mb-2">🌐</div>
                 <h3 class="font-bold text-lg mb-1">Check This Website</h3>
-                <p class="text-gray-300 text-xs">Bookmark and visit regularly for countdown and announcements right here on the landing page.</p>
+                <p class="text-gray-300 text-xs">Bookmark and visit regularly for countdown and <br>announcements right here on the landing page.</p>
                  <span class="text-pf-gray font-semibold text-xs mt-2 inline-block select-none pointer-events-none">Check Here →</span>
             </div>
             
@@ -936,6 +937,25 @@
     </div>
 </section>
   
+
+    <!-- DELETE MY EMAIL SECTION -->
+    <section id="delete-email" class="py-12 px-4 bg-red-900/10 border-t border-red-700">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="font-display font-black text-3xl md:text-4xl mb-4 text-red-500">
+                ⚠️ DELETE MY EMAIL ⚠️
+            </h2>
+            <p class="text-gray-300 mb-6">
+                Permanently remove your email and all associated information from our records.
+            </p>
+            <p class="text-red-400 font-bold mb-4">
+                🚨 WARNING: This action is irreversible! 🚨
+            </p>
+            <a href="https://de9c0110.sibforms.com/serve/MUIFAGfTwFdv7ApqLIMPMwlp8BMmAFzrsNBjVTHoe9CQgGhT_sgKl93YK-JQ4QnApzSxd4MNOP1zZEmsh69VQ6Dae0c8RPOv8PLaEcTy1J-E1WnLa_1gv9XV74HCFiQNFQ2U7mxgHAuOR8CkbAcmXDVn4PALEfYC69QbcSD0kAxJh-d4Iz8pzKy9nlp0XayzgaW45Boc6u6Pm3s1" class="bg-red-800 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-sm md:text-base transition-colors">
+                DELETE MY EMAIL
+            </a>
+        </div>
+    </section>
+
 
         </div>
     </section>
@@ -1055,6 +1075,12 @@
             document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
             document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
 
+            // Update header countdown display
+            document.getElementById("days-header").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours-header").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes-header").innerHTML = minutes.toString().padStart(2, '0');
+            if (document.getElementById("seconds-header")) document.getElementById("seconds-header").innerHTML = seconds.toString().padStart(2, '0');
+
             // Handle countdown expiration
             if (distance < 0) {
                 clearInterval(countdownInterval);
@@ -1068,6 +1094,7 @@
                     const grayText = signupSection.querySelector('p.text-gray-300');
                     if(grayText) grayText.remove();
                 }
+                document.getElementById("countdown-header").innerHTML = '<span class="text-sm font-display font-black text-red-500">WAITLIST CLOSED!</span>';
             }
         }, 1000);
 
